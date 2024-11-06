@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+    <title>Olive.com</title>
+    <link rel="stylesheet" href="CSS/music.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dokdo&family=Irish+Grover&family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/5abf071da6.js" crossorigin="anonymous"></script>
+    <script src="member1.js"></script>
+</head>
+<body>
+    <header>
+            <nav class="btn_home">
+                <a href="index.html" class="home">
+                    <img src="images/logo_green.png" alt="logo">
+                </a>
+            </nav>
+            <nav class="libre-barcode-39-text-regular">MUSIC</nav>
+            <button class="header__trigger"><i class="fa-solid fa-burst fa-5x" style="color: #2fe351;"></i></button>
+    </header>
+    <article>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <div class="element">
+                    <div> listen now  listen now  listen now  listen now  listen now  listen now  listen now  listen now </div>
+                </div>
+            </div>
+            <div class="marquee-content2">
+                <div class="element">
+                    <div> listen now  listen now  listen now  listen now  listen now  listen now  listen now  listen now </div>
+                </div>
+            </div>
+            <div class="marquee-content3">
+                <div class="element">
+                    <div> listen now  listen now  listen now  listen now  listen now  listen now  listen now  listen now </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <section>
+        <div class="UP">
+            <div class="poster">
+                <img src="images/poster.jpg" alt="poster">
+            </div>
+        </div>
+        
+        <div class="below">
+            <div class="al_text">
+                <h1 class="irish-grover-regular">
+                    ALBUM
+                </h1>
+            </div>
+        </div>
+            <div class="album">
+                <div class="album1">
+                    <div class="container">
+                        <img src="images/albam1.jpg" alt="album1">
+                    </div>
+                    <div class="irish-grover-regular">
+                        <p class="word">PASTA</p>
+                    </div>
+                    <div class="music">
+                        <audio id="song">
+                            <sounce src="vc-上傳音色.mp3" type="audio/mprg"></sounce>
+                        </audio>
+                        <input type="range" value="0" id="progress">
+                    </div>
+                    
+                    <div class="controls">
+                        <div><i class="fa-solid fa-backward fa-2xl" style="color: #000000;"></i></div>
+                        <div oneclick="playPause()"><i class="fa-solid fa-play fa-2xl" style="color: #000000;" id="ctrlIcon"></i></div>
+                        <div><i class="fa-solid fa-forward fa-2xl" style="color: #000000;"></i></div>
+                    </div>
+
+                    <div class="btn">
+                        <button class="listen">Listen now</button>
+                    </div>
+                </div>
+                
+                <div class="album2">
+                    <div class="container">
+                        <img src="images/albam2.jpg" alt="album2">
+                    </div>
+                    
+                    <div class="irish-grover-regular">
+                        <p>OLIVE&PICKLES</p>
+                    </div>
+                    <div class="music">
+                        <audio id="song">
+                            <sounce src="vc-上傳音色.mp3" type="audio/mpeg"></sounce>
+                        </audio>
+                        <input type="range" value="0" id="progress">
+                    </div>
+                    
+                    <div class="controls">
+                        <div><i class="fa-solid fa-backward fa-2xl" style="color: #000000;"></i></div>
+                        <div oneclick="playPause()"><i class="fa-solid fa-play fa-2xl" style="color: #000000;" id="ctrlIcon"></i></div>
+                        <div><i class="fa-solid fa-forward fa-2xl" style="color: #000000;"></i></div>
+                    </div>
+                    <div class="btn">
+                        <button class="listen">Listen now</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <script>
+        let progress = document.getElementById("progress");
+        let song = document.getElementById("song");
+        let ctrlIcon = document.getElementById("ctrlIcon");
+        song.onloadedmetadata = function(){
+            progress.max = song.duration;
+            progress.value = song.currentTime;
+        }
+
+        function playPause(){
+            if(ctrlIcon.classList.contains("fa-pause")){
+                song.pause();
+                ctrlIcon.classList.remove("fa-pause");
+                ctrlIcon.classList.add("fa-play");
+            }
+            else{
+                song.play();
+                ctrlIcon.classList.add("fa-pause");
+                ctrlIcon.classList.remove("fa-play");
+            }
+        }
+
+        if(song.play()){
+            setInterval(() => {
+                progress.value = song,currentTime;
+            }, 500);
+        }
+
+        progress.onchange = function(){
+            song.play();
+            osng.currentTime = progress.value;
+            ctrlIcon.classList.add("fa-pause");
+            ctrlIcon.classList.remove("fa-play");
+        }
+
+    </script>
+    
+    <footer class="irish-grover-regular">
+        <h2 class="copyright">©Copyright 2024 Olive Band</h2>
+    </footer>
+</body>
+</html>
