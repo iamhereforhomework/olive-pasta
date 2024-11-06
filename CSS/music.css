@@ -1,0 +1,339 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.header__trigger{
+    tab-size: 10;
+    -webkit-tap-highlight-color: transparent;
+    word-break: break-word;
+    --screenHeight: 911px;
+    --pageHeight: 1105px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 300%;
+    box-sizing: border-box;
+    overflow: visible;
+    text-transform: none;
+    -webkit-appearance: button;
+    border: none;
+    cursor: pointer;
+    font-family: initial;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    /*background: #db3742;*/
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    height: 10vw;
+    max-height: 120px;
+    max-width: 120px;
+    width: 10vw;
+    z-index: 10;
+}
+
+.libre-barcode-39-text-regular {
+    font-family: "Libre Barcode 39 Text", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 110px;
+    display: flex;
+    justify-content: center;
+    width: 30vh;
+    padding: 10px;
+    color: #2fe351;
+    position: absolute;
+    left: 460px;
+    top: 100px;
+  }
+
+body {
+    width: auto;
+    background-color: #de2929;
+}
+
+  .home img {
+    height: 250px; /* 設置 logo 圖片的高度 */
+    width: auto;
+    padding: 10px 30px;
+}
+.UP{
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+
+}
+.poster{
+    position: absolute;
+    width: auto;
+    height: 99vh;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    cursor: default;
+    line-height: 1.5;
+    tab-size: 4;
+    -webkit-tap-highlight-color: transparent;
+    word-break: break-word;
+    --screenHeight: 911px;
+    --pageHeight: 1105px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+    
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    top: 400px;
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+  }
+  
+  .marquee-content2 {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee2 10s linear infinite;
+  }
+  .marquee-content3 {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee2 10s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes marquee2 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes marquee3 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .element{
+    /*border:1px solid rgb(255, 255, 255);*/
+    padding: 10px 0;
+    margin: 10px 0;
+    background-color: #000000;
+    width: auto;
+    height: 60px;
+    font-size: 30px;
+    display: block;
+    justify-content: space-evenly;
+    font-family: "Irish Grover", serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    letter-spacing: 10px;
+    color: #de2929;
+    z-index: 1;
+    cursor: default;
+    line-height: 1.5;
+    tab-size: 4;
+    -webkit-tap-highlight-color: transparent;
+    word-break: break-word;
+    --screenHeight: 911px;
+    --pageHeight: 1364px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    clip-path: inset(0 0 0 0);
+}
+
+.irish-grover-regular {
+    font-family: "Irish Grover", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.below{
+    width: 1020px;
+    display: flex;
+    padding-top: 30px;
+}
+
+.al_text{
+    justify-content: center;
+    display: flex;
+    font-size: 80px;
+    position: absolute;
+    width: 258px;
+    height: 97px;
+    left: 831px;
+    top: 1280px;
+    line-height: 97px;
+}
+
+.album{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album1{
+    padding-top: 150px;
+
+    flex-wrap: wrap;
+    margin: auto;
+    margin-left: 300px;
+    width: 605px;
+    height: 605px;
+}
+
+.album p{
+    justify-content: center;
+    font-size: 70px;
+}
+
+.container {
+    position: relative;
+    width: 100%; /* 佔總寬度的50%，也可以換成任何你想要的寬度 */
+    padding-top: 100%;  /* 也是佔總寬度的50%，因此長寬一樣長 */
+  }
+  
+  .container img {
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; /* 將圖片固定在父層的大小 */
+    width: 100%;
+    height: 100%; /* 高和寬都填滿容器 */
+    object-fit: cover; /* 和background-image設定background-size: cover一樣，圖片剛好填滿 */
+    object-position: center;
+  }
+
+  .album2{
+    padding-top: 150px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-right: 300px;
+    width: 605px;
+    height: 605px;
+  }
+
+.listen{
+    text-decoration: none;
+    padding: 5px 20px;
+    color: black;
+    background-color: #2fe351;
+    font-size: 30px;
+    border-radius: 30px;
+    justify-content: center;
+    font-family: "Irish Grover", serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 220px;
+}
+
+.btn{
+    padding-top: 10px;
+    justify-content: center;
+    padding-left: 200px;
+}
+.word{
+    justify-content: center;
+    padding-left: 210px;
+}
+
+#progress{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #000000;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 40px 0;
+}
+
+#progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: #de2929;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 7px solid #2fe351;
+    box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+    
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls div{
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    background: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #2fe351;
+    box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
+    cursor: pointer;
+}
+
+.controls div:nth-child(2){
+    transform: scale(1.5);
+    background: #2fe351;
+    color: #ffffff;
+}
+
+footer {
+    width: 100%;
+    height: 130px;
+    background-color: #2fe351;
+    display: flex;
+    justify-content: center;
+    bottom: -600px;
+    z-index: 6;
+    position: absolute;
+    position: relative;
+    flex-grow: 1;
+}
+.copyright{
+    font-size: 30px;
+    justify-content: center;
+    color: #ffffff;
+    padding: 50px 0;
+}

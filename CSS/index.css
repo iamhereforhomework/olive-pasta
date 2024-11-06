@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header__trigger{
+    tab-size: 10;
+    -webkit-tap-highlight-color: transparent;
+    word-break: break-word;
+    --screenHeight: 911px;
+    --pageHeight: 1105px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 300%;
+    box-sizing: border-box;
+    overflow: visible;
+    text-transform: none;
+    -webkit-appearance: button;
+    border: none;
+    cursor: pointer;
+    font-family: initial;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    /*background: #db3742;*/
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    height: 10vw;
+    max-height: 120px;
+    max-width: 120px;
+    width: 10vw;
+    z-index: 10;
+}
+
+.libre-barcode-39-text-regular {
+  font-family: "Libre Barcode 39 Text", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  width: 30vh;
+  padding: 10px;
+  color: #2fe351;
+}
+a {
+  color:#2fe351;
+}
+
+a:hover{
+  color:#ffffff;
+}
+
+.olive{
+  background-size: contain;
+}
+
+.list{
+    font-family: "Irish Grover", serif;
+    font-weight: 400;
+    font-style: normal;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.header .list .listbuttons{
+    font-size: 20px;
+    font-family: "Irish Grover", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/*article .container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}*/
+
+header {
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #de2929;
+  }
+article{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #de2929;
+}
+
+/*}
+  .music-player{
+    background: #2d4829;
+    width: 400px;
+    padding: 25px 35px;
+    text-align: center;
+  }*/
+  nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .logo {
+    width: 1200px;
+    height: 700px;
+    margin: -10px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    left: -100px;
+    top: -200px;
+    /*border: 2px solid;*/
+  }
+  .logo img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .images{
+    position: relative;
+    width: 1200px;
+    height: 700px;
+    margin-left: 50px;
+    padding: 0 -100px;
+    object-fit: cover;
+    display: flex;
+  }
+  .background{
+    width: 1300px;
+    height: 630px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    left: -90px;
+    top: -20px;
+  }
+
+  footer {
+    width: 100%;
+    height: 130px;
+    background-color: #2fe351;
+    bottom: 0;
+    display: flex;
+    z-index: 3;
+    position: relative;
+    justify-content: center;
+}
+
+.irish-grover-regular {
+  font-family: "Irish Grover", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding-top: 50px;
+}

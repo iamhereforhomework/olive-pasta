@@ -1,0 +1,340 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.header__trigger{
+    tab-size: 10;
+    -webkit-tap-highlight-color: transparent;
+    word-break: break-word;
+    --screenHeight: 911px;
+    --pageHeight: 1105px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 300%;
+    box-sizing: border-box;
+    overflow: visible;
+    text-transform: none;
+    -webkit-appearance: button;
+    border: none;
+    cursor: pointer;
+    font-family: initial;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    /*background: #db3742;*/
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    height: 10vw;
+    max-height: 120px;
+    max-width: 120px;
+    width: 10vw;
+    z-index: 10;
+}
+
+.libre-barcode-39-text-regular {
+    font-family: "Libre Barcode 39 Text", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 110px;
+    display: flex;
+    justify-content: center;
+    width: 30vh;
+    padding: 10px;
+    color: #2fe351;
+    position: absolute;
+    left: 460px;
+    top: 100px;
+  }
+
+body {
+    background-color: #397A00;
+  }
+/*header{
+    width: 300px;
+    height: 100px;
+    display: flex;
+
+    flex-wrap: wrap;
+    background-color: #de2929;
+}
+.logo_1 {
+    display: block;
+    padding-top: 40%;
+    width: 500px;
+    height: 100px;
+    /*margin: 50px;*/
+    /*display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /*border: 2px solid;*/
+    /*max-width: 50%;
+    max-height: 50%;
+
+}*/
+.home img {
+    height: 250px; /* 設置 logo 圖片的高度 */
+    width: auto;
+    padding: 10px 30px;
+}
+
+/*.logo_1 .img{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    flex-shrink: 0;
+    text-decoration: none;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    position: absolute;
+    left: 35px;
+    top: 63px;
+    width: 200px;
+    height: 100px;
+    background-image: /* webpackIgnore: true */ /*url('assets/_37.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}*/
+
+.name{
+    position: absolute;
+    left: 285px;
+    top: 200px;
+    width: min-content;
+    height: min-content;
+    white-space: wrap;
+    font-size: 120PX;
+    display: flex;
+    
+}
+
+.position{
+    position: absolute;
+    left: 460px;
+    top: 320px;
+    width: min-content;
+    height: min-content;
+    white-space: wrap;
+    font-size: 70PX;
+    display: flex;
+    transform:rotate(-8deg)
+}
+.fuck{
+    position: absolute;
+    object-fit: cover;
+    display: flex;
+}
+.lemon{
+    top: 70px;
+    left: 910px;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+}
+
+.pesto{
+    height: 1250px;
+    width: auto;
+    left: 105vh;
+    top: -170px;
+    display: flex;
+    position: absolute;
+    z-index: 3;
+}
+
+.inner_block .left{
+    position: absolute;
+    left: 40px;
+    top: 400px
+}
+
+.left:hover{
+    background-color:rgb(0, 0, 0, 0);
+    width: 60px;
+    height: 50px;
+    margin: 0  0 0 -5px;
+}
+
+.inner_block .right{
+    position: absolute;
+    left: 1810px;
+    top: 400px
+}
+
+.right:hover{
+    background-color:rgb(0, 0, 0, 0);
+    width: 60px;
+    height: 50px;
+    margin: 0  0 0 5px;
+}
+
+.box{
+    cursor: default;
+    tab-size: 4;
+    word-break: break-word;
+    height: auto;
+    width: 580px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+    padding: 0 ;
+    font-size: 22px;
+    color: #FEF06F;
+    padding-top: 300px;
+    left: 283px;
+    top: 180px;
+    position: absolute;
+}
+
+.dokdo-regular {
+    font-family: "Dokdo", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+/*.marquee-qq{
+    min-height: 110svh;
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+    overflow: hidden;
+    
+}
+
+.marquee {
+    white-space: nowrap;
+    animation: marquee linear infinite;
+    font-size: 24px;
+    
+}*/
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    top: 400px;
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+  }
+  
+  .marquee-content2 {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee2 10s linear infinite;
+  }
+  .marquee-content3 {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee2 10s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes marquee2 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes marquee3 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+.element{
+    
+    /*border:1px solid rgb(255, 255, 255);*/
+    padding: 10px 0;
+    margin: 10px 0;
+    background-color: #FEF06F;
+    width: auto;
+    height: 60px;
+    font-size: 30px;
+    display: block;
+    justify-content: space-evenly;
+    font-family: "Irish Grover", serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    letter-spacing: 10px;
+    color: #397A00;
+    z-index: 1;
+    cursor: default;
+    line-height: 1.5;
+    tab-size: 4;
+    -webkit-tap-highlight-color: transparent;
+    word-break: break-word;
+    --screenHeight: 911px;
+    --pageHeight: 1364px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    clip-path: inset(0 0 0 0);
+}
+
+/*@keyframes marquee {
+    from {
+    transform: translateX(100vw);
+    }
+    to {
+    transform: translateX(-100%);
+    }
+}*/
+
+.article{
+    display: block;
+    background-color: #FEF06F;
+    width: auto;
+    height: 60px;
+}
+
+footer {
+    width: 100%;
+    height: 130px;
+    background-color: #2fe351;
+    bottom: -560PX;
+    display: flex;
+    justify-content: center;
+    z-index: 6;
+    position: absolute;
+}
+.irish-grover-regular {
+  font-family: "Irish Grover", serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  letter-spacing: 10px;
+  color: #FEF06F;
+}
+.copyright{
+    font-size: 30px;
+    justify-content: center;
+    color: #ffffff;
+    padding: 50px 0;
+}
