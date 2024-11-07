@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Dokdo&family=Irish+Grover&family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/5abf071da6.js" crossorigin="anonymous"></script>
-    <script src="member1.js"></script>
 </head>
 <body>
     <header>
@@ -68,14 +67,14 @@
                     </div>
                     <div class="music">
                         <audio id="song">
-                            <sounce src="vc-上傳音色.mp3" type="audio/mprg"></sounce>
+                            <source src="vc-上傳音色.mp3" type="audio/mpeg"></source>
                         </audio>
                         <input type="range" value="0" id="progress">
                     </div>
                     
                     <div class="controls">
                         <div><i class="fa-solid fa-backward fa-2xl" style="color: #000000;"></i></div>
-                        <div oneclick="playPause()"><i class="fa-solid fa-play fa-2xl" style="color: #000000;" id="ctrlIcon"></i></div>
+                        <div onclick="playPause()"><i class="fa-solid fa-play fa-2xl" style="color: #000000;" id="ctrlIcon"></i></div>
                         <div><i class="fa-solid fa-forward fa-2xl" style="color: #000000;"></i></div>
                     </div>
 
@@ -94,14 +93,14 @@
                     </div>
                     <div class="music">
                         <audio id="song">
-                            <sounce src="vc-上傳音色.mp3" type="audio/mpeg"></sounce>
+                            <source src="vc-上傳音色.mp3" type="audio/mpeg"></source>
                         </audio>
                         <input type="range" value="0" id="progress">
                     </div>
                     
                     <div class="controls">
                         <div><i class="fa-solid fa-backward fa-2xl" style="color: #000000;"></i></div>
-                        <div oneclick="playPause()"><i class="fa-solid fa-play fa-2xl" style="color: #000000;" id="ctrlIcon"></i></div>
+                        <div onclick="playPause()"><i class="fa-solid fa-play fa-2xl" style="color: #000000;" id="ctrlIcon"></i></div>
                         <div><i class="fa-solid fa-forward fa-2xl" style="color: #000000;"></i></div>
                     </div>
                     <div class="btn">
@@ -115,35 +114,36 @@
         let progress = document.getElementById("progress");
         let song = document.getElementById("song");
         let ctrlIcon = document.getElementById("ctrlIcon");
-        song.onloadedmetadata = function(){
+
+            song.onloadedmetadata = function(){
             progress.max = song.duration;
             progress.value = song.currentTime;
         }
 
         function playPause(){
-            if(ctrlIcon.classList.contains("fa-pause")){
+            if(ctrlIcon.classList.contains("fa-pause fa-2xl")){
                 song.pause();
-                ctrlIcon.classList.remove("fa-pause");
-                ctrlIcon.classList.add("fa-play");
+                ctrlIcon.classList.remove("fa-pause fa-2xl");
+                ctrlIcon.classList.add("fa-play fa-2xl");
             }
             else{
                 song.play();
-                ctrlIcon.classList.add("fa-pause");
-                ctrlIcon.classList.remove("fa-play");
+                ctrlIcon.classList.add("fa-pause fa-2xl");
+                ctrlIcon.classList.remove("fa-play fa-2xl");
             }
         }
 
         if(song.play()){
             setInterval(() => {
-                progress.value = song,currentTime;
+                progress.value = song.currentTime;
             }, 500);
         }
 
         progress.onchange = function(){
             song.play();
-            osng.currentTime = progress.value;
-            ctrlIcon.classList.add("fa-pause");
-            ctrlIcon.classList.remove("fa-play");
+            song.currentTime = progress.value;
+            ctrlIcon.classList.add("fa-pause fa-2xl");
+            ctrlIcon.classList.remove("fa-play fa-2xl");
         }
 
     </script>
